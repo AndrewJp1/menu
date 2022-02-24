@@ -1,0 +1,17 @@
+.layout {
+  min-height: 100vh;
+}
+.sider{
+  flex: 0 0 auto  !important;
+  max-width: max-content  !important;
+  min-width: auto  !important;
+  width: auto  !important;
+  min-height: 100vh;
+}
+.link{
+  font-size: 13px;
+  font-weight: 500;
+}
+.off{
+  display: none;
+}

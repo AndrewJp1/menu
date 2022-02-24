@@ -1,0 +1,31 @@
+<nz-layout>
+  <nz-sider class="sider">
+
+    <!-- MENU LATERAL -->
+    <ul nz-menu nzTheme="dark" nzMode="inline" *ngFor="let item of dato?.menus"> <!-- menu -->
+      <li nz-submenu nzTitle="{{item[0]}}"> <!-- menu nombre -->
+
+        <div *ngIf="show_A">
+          <ul *ngFor="let item of item[1]" > <!-- menu N-1 -->
+            <li nz-submenu nzTitle="{{item[0]}}"> <!-- menu nombre N-1 -->
+              <ul *ngFor="let item of item[1]"> <!-- menu N-2 -->
+                <li nz-menu-item *ngFor="let item of item">{{item}}</li> <!-- menu nombre N-2 -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div *ngIf="show_B">
+          <ul *ngFor="let item of item[1]" > <!-- menu N-1 -->
+            <li nz-submenu nzTitle="{{item[0]}}" [ngClass]="item[0] == 'CURSO1' ? 'off':''"></li> <!-- menu nombre N-1 -->
+            <ul *ngFor="let item of item[1]"> <!-- menu N-2 -->
+              <li nz-menu-item *ngFor="let item of item">{{item}}</li> <!-- menu nombre N-2 -->
+            </ul>
+          </ul>
+        </div>
+
+      </li>
+    </ul>
+
+  </nz-sider>
+</nz-layout>
